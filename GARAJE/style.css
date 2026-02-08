@@ -23,7 +23,7 @@ body {
 
 /* Header */
 .header {
-  background-color: #fff;
+  background-color: #111827;
   padding: 20px 0;
   position: sticky;
   top: 0;
@@ -39,7 +39,7 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -50,6 +50,7 @@ body {
 }
 
 .ganchoText{
+    margin-top: 8%;
     text-align: center;
     margin-left: 5%;
 }
@@ -75,10 +76,22 @@ body {
   font-size: 18px;
   margin-bottom: 30px;
 } */
-.divbtn{
-    margin-top: 2%;
+ .buttons{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 550px;
+  margin-top: 10px;
+ }
+ .divbtn, .divbtn2 {
+  flex: 0 0 auto; /* No crecen ni se encogen */
 }
+
 .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  text-decoration: none;
   background-color: #5f3636;
   color: #fff;
   text-decoration: none;
@@ -93,13 +106,13 @@ body {
 }
 
 /* Estilos del slider */
-.slider {
-  
-  width: auto;
-  
+.slider {  
+  margin-top: 15px;
   margin-bottom: 30px;
   overflow: hidden;
   border-radius: 10px;
+  width: 80%;
+  margin-left: 150px;
 }
 
 .slides {
@@ -127,7 +140,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: rgb(32, 32, 32);
   border: none;
   padding: 15px;
   cursor: pointer;
@@ -169,6 +182,6 @@ body {
 }
 
 .dot.active {
-  background-color: white;
+  background-color: rgb(5, 5, 5);
 }
 
