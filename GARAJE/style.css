@@ -197,14 +197,165 @@ body {
   background-color: rgb(5, 5, 5);
 }
 
+/* Responsive */
+/* Tablets y pantallas medianas */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+  
+  .slider {
+    width: 95%;
+  }
+  
+  .slides {
+    height: 450px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .slider {
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .slides {
+    height: 300px;
+  }
+  
+  .buttons {
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .btn1, .btn2 {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .slides {
+    height: 250px;
+  }
+  
+  .ganchoText {
+    margin-left: 2%;
+    font-size: 14px;
+  }
+}
+
 
 /* DIV DE EVENTOS */
 
-.divEvents{
+.divEvents {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* Más espacio entre imagen y texto */
+  padding: 60px 40px; /* Más padding */
+  max-width: 1350px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el div */
   margin-top: 3%;
-}
-.imgEve{
- width: 50px;
- height: auto;
+  background-color: #111827; /* Fondo oscuro como en la imagen */
+  border-radius: 6px;
 }
 
+.imgEve {
+  flex: 0 0 auto;
+  width: 650px; /* Imagen más grande */
+}
+
+.imgEve img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.infoEve {
+  flex: 1;
+  color: white; /* Texto blanco sobre fondo oscuro */
+  text-align: center; /* Centra el texto */
+}
+
+.infoEve h3 {
+  font-size: 48px; /* Título más grande */
+  font-weight: bold;
+  margin-bottom: 2%;
+  letter-spacing: 2px;
+}
+
+.infoEve p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-weight: bold;
+  
+}
+
+/* Botón si lo tienes */
+.infoEve .btnInfo {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.infoEve .btnInfo:hover {
+  background-color: #f0f0f0;
+}
+/* Para pantallas pequeñas */
+@media (max-width: 768px) {
+  .divEvents {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+  
+  .imgEve {
+    width: 100%;
+  }
+  
+  .infoEve h3 {
+    font-size: 36px;
+  }
+}
+
+.containerInfo {
+  margin-top: 5%;
+  display: flex;
+  gap: 20px;
+  
+  
+}
+
+.cochesInfo{
+  margin-left: 2%;
+  
+  text-align: center;
+  flex: 1;
+  padding: 20px;
+  
+}
+.cochesInfo h5{
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.cochesInfo img{
+  width: 80px;
+}
