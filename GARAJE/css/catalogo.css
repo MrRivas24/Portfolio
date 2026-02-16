@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header */
+.header {
+  background-color: #111827;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none; /* Para mobile más adelante */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*Cartas*/
+.containerCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.card {
+    background: #111827;
+    color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #c00000;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background: #ff0000;
+}
+
+/* Tablets horizontal (768px - 1023px) */
+@media (max-width: 1023px) {
+    .containerCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        padding: 30px;
+    }
+    
+    .card {
+        padding: 18px;
+    }
+    
+    .card img {
+        height: 180px;
+    }
+    
+    .card button {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* Tablets vertical (481px - 767px) */
+@media (max-width: 767px) {
+    .containerCards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .card img {
+        height: 150px;
+    }
+    
+    .card h3 {
+        font-size: 16px;
+    }
+    
+    .card p {
+        font-size: 13px;
+    }
+    
+    .card button {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* Móviles (320px - 480px) */
+@media (max-width: 480px) {
+    .containerCards {
+        grid-template-columns: 1fr; /* Una columna */
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .card {
+        padding: 15px;
+        max-width: 100%;
+    }
+    
+    .card img {
+        height: 200px;
+    }
+    
+    .card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .card p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .card button {
+        padding: 12px;
+        font-size: 14px;
+        margin-top: 12px;
+    }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+@media (max-width: 319px) {
+    .containerCards {
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+    
+    .card img {
+        height: 180px;
+    }
+    
+    .card h3 {
+        font-size: 16px;
+    }
+    
+    .card p {
+        font-size: 12px;
+    }
+    
+    .card button {
+        padding: 10px;
+        font-size: 13px;
+    }
+}

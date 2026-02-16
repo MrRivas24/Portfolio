@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/catalogo.css">
     <title>Catalogo</title>
 </head>
-<body>
-    <div class="containerCards">
-        <div class="card">
-            <img src="" alt="">
-            <H3>Audi R8</H3>
-            <P>550CV - Automático</P>
-            <button>Ver Más</button>
-        </div>
-        <div class="card">
-            <img src="" alt="">
-            <H3>Audi R8</H3>
-            <P>550CV - Automático</P>
-            <button>Ver Más</button>
-        </div>
-        <div class="card">
-            <img src="" alt="">
-            <H3>Audi R8</H3>
-            <P>550CV - Automático</P>
-            <button>Ver Más</button>
-        </div>
-        <div class="card">
-            <img src="" alt="">
-            <H3>Audi R8</H3>
-            <P>550CV - Automático</P>
-            <button>Ver Más</button>
-        </div>
-    </div>
 
+<body>
+    <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">LOGO</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="catalog.html">Catálogo</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle">☰</div>
+    </div>
+  </header>
+    
+     <div class="containerCards" id="containerCards">
+        <!-- Las cards se generan con JS -->
+    </div>
+<script src="js/catalogo.js"></script>
 </body>
 </html>
