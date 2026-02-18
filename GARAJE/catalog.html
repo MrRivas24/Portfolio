@@ -14,7 +14,7 @@
       <div class="logo">LOGO</div>
       <nav class="nav">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="catalog.html">Catálogo</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -23,10 +23,36 @@
       <div class="menu-toggle">☰</div>
     </div>
   </header>
-    
+
+  <div class="filtro-dropdown">
+  <button class="filtro-btn-principal" id="filtroBtn">
+    <span class="filtro-texto">Filtrar</span>
+    <span class="flecha">▼</span>
+  </button>
+
+    <div class="filtros" id="filtrosMenu">
+      <button data-marca="Todos" class="active">Todos</button>
+      <button data-marca="Audi">Audi</button>
+      <button data-marca="BMW">BMW</button>
+      <button data-marca="Mercedes">Mercedes</button>
+    </div>
+    </div>
+
      <div class="containerCards" id="containerCards">
         <!-- Las cards se generan con JS -->
     </div>
+
+    <div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="cerrar" id="cerrarModal">&times;</span>
+        <div class="modal-body" id="modalBody">
+            <!-- Contenido dinámico -->
+        </div>
+    </div>
+</div>
+
 <script src="js/catalogo.js"></script>
+
+
 </body>
 </html>

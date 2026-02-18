@@ -76,45 +76,150 @@ body {
   font-size: 18px;
   margin-bottom: 30px;
 } */
- .buttons{
+ /* Estilos base */
+.buttons {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: center; /* Centra los botones */
   flex-wrap: wrap;
-  margin-left: 700px;
-  margin-top: 10px;
- }
- .divbtn, .divbtn2 {
-  flex: 0 0 auto; /* No crecen ni se encogen */
+  margin: 10px auto; /* Centra horizontalmente */
+  max-width: 1200px;
+}
+
+.divbtn, .divbtn2 {
+  flex: 0 0 auto;
 }
 
 .btn1 {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 15px 30px;
   text-decoration: none;
   background-color: #111827;
   color: #fff;
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.btn2{
-  display: inline-block;
-  padding: 12px 30px;
-  text-decoration: none;
-  background-color: #c7cad1;
-  color: #fff;
-  text-decoration: none;
-  padding: 15px 30px;
   border-radius: 5px;
   font-weight: bold;
   transition: 0.3s;
 }
 
-.btn:hover {
+.btn2 {
+  display: inline-block;
+  padding: 15px 30px;
+  text-decoration: none;
+  background-color: #c7cad1;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn1:hover {
   background-color: #333;
+  transform: scale(1.05);
+}
+
+.btn2:hover {
+  background-color: #a0a3aa;
+  transform: scale(1.05);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Desktop grande (1440px y superior) */
+@media (min-width: 1440px) {
+  .buttons {
+    gap: 25px;
+    margin-top: 15px;
+  }
+  
+  .btn1, .btn2 {
+    padding: 18px 40px;
+    font-size: 16px;
+  }
+}
+
+/* Desktop estándar (1024px - 1439px) */
+@media (max-width: 1439px) {
+  .buttons {
+    gap: 20px;
+  }
+  
+  .btn1, .btn2 {
+    padding: 15px 35px;
+  }
+}
+
+/* Tablets horizontal (768px - 1023px) */
+@media (max-width: 1023px) {
+  .buttons {
+    gap: 15px;
+    margin: 15px auto;
+    padding: 0 20px;
+  }
+  
+  .btn1, .btn2 {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+/* Tablets vertical (481px - 767px) */
+@media (max-width: 767px) {
+  .buttons {
+    gap: 15px;
+    margin: 15px auto;
+    padding: 0 15px;
+    width: 100%;
+  }
+  
+  .divbtn, .divbtn2 {
+    flex: 1 1 auto; /* Permiten crecer */
+    min-width: 150px;
+  }
+  
+  .btn1, .btn2 {
+    width: 100%;
+    text-align: center;
+    padding: 14px 25px;
+    font-size: 14px;
+  }
+}
+
+/* Móviles (320px - 480px) */
+@media (max-width: 480px) {
+  .buttons {
+    flex-direction: column; /* Apila verticalmente */
+    gap: 12px;
+    margin: 15px auto;
+    padding: 0 10px;
+    width: 100%;
+  }
+  
+  .divbtn, .divbtn2 {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .btn1, .btn2 {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+@media (max-width: 319px) {
+  .buttons {
+    gap: 10px;
+    padding: 0 5px;
+  }
+  
+  .btn1, .btn2 {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
 }
 
 /* Estilos del slider */
@@ -260,22 +365,20 @@ body {
 
 
 /* DIV DE EVENTOS */
-
 .divEvents {
   display: flex;
   align-items: center;
-  gap: 50px; /* Más espacio entre imagen y texto */
-  padding: 60px 40px; /* Más padding */
-  max-width: 1700px; /* Ancho máximo del contenedor */
-  margin: 0 auto; /* Centra el div */
-  margin-top: 3%;
-  background-color: #111827; /* Fondo oscuro como en la imagen */
+  gap: 50px;
+  padding: 60px 40px;
+  max-width: 1700px;
+  margin: 3% auto 0;
+  background-color: #111827;
   border-radius: 6px;
 }
 
 .imgEve {
   flex: 0 0 auto;
-  width: 800px; /* Imagen más grande */
+  width: 800px;
 }
 
 .imgEve img {
@@ -287,12 +390,12 @@ body {
 
 .infoEve {
   flex: 1;
-  color: white; /* Texto blanco sobre fondo oscuro */
-  text-align: center; /* Centra el texto */
+  color: white;
+  text-align: center;
 }
 
 .infoEve h3 {
-  font-size: 48px; /* Título más grande */
+  font-size: 48px;
   font-weight: bold;
   margin-bottom: 2%;
   letter-spacing: 2px;
@@ -302,7 +405,51 @@ body {
   font-size: 18px;
   line-height: 1.8;
   font-weight: bold;
-  
+}
+
+/* SECCIÓN DE INFORMACIÓN (las 3 tarjetas) */
+.containerInfo {
+  display: flex;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 40px 20px;
+}
+
+.cochesInfo,
+.persInfo,
+.gestionInfo {
+  flex: 1;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.cochesInfo img,
+.persInfo img,
+.gestionInfo img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.cochesInfo h5,
+.persInfo h5,
+.gestionInfo h5 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.cochesInfo p,
+.persInfo p,
+.gestionInfo p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
 }
 
 /* Botón si lo tienes */
@@ -320,44 +467,81 @@ body {
 .infoEve .btnInfo:hover {
   background-color: #f0f0f0;
 }
-/* Para pantallas pequeñas */
-@media (max-width: 768px) {
-  .divEvents {
+/* RESPONSIVE */
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .containerInfo {
+    gap: 20px;
+    padding: 30px 15px;
+  }
+  
+  .cochesInfo img,
+  .persInfo img,
+  .gestionInfo img {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .cochesInfo h5,
+  .persInfo h5,
+  .gestionInfo h5 {
+    font-size: 16px;
+  }
+  
+  .cochesInfo p,
+  .persInfo p,
+  .gestionInfo p {
+    font-size: 13px;
+  }
+}
+
+/* Tablets pequeñas y móviles (menos de 768px) */
+@media (max-width: 767px) {
+  .containerInfo {
     flex-direction: column;
-    padding: 40px 20px;
+    padding: 30px 15px;
+    gap: 25px;
   }
   
-  .imgEve {
+  .cochesInfo,
+  .persInfo,
+  .gestionInfo {
     width: 100%;
+    padding: 25px 15px;
   }
   
-  .infoEve h3 {
-    font-size: 36px;
+  .cochesInfo img,
+  .persInfo img,
+  .gestionInfo img {
+    width: 60px;
+    height: 60px;
   }
 }
 
-.containerInfo {
-  margin-top: 5%;
-  display: flex;
-  gap: 20px;
+/* Móviles pequeños (menos de 480px) */
+@media (max-width: 480px) {
+  .containerInfo {
+    padding: 20px 10px;
+  }
   
+  .cochesInfo,
+  .persInfo,
+  .gestionInfo {
+    padding: 20px 15px;
+  }
   
-}
-
-.cochesInfo{
-  margin-left: 2%;
+  .cochesInfo h5,
+  .persInfo h5,
+  .gestionInfo h5 {
+    font-size: 16px;
+  }
   
-  text-align: center;
-  flex: 1;
-  padding: 20px;
-  
-}
-.cochesInfo h5{
-  font-weight: bold;
-  font-size: 1.3em;
-}
-.cochesInfo img{
-  width: 80px;
+  .cochesInfo p,
+  .persInfo p,
+  .gestionInfo p {
+    font-size: 13px;
+  }
 }
 
 /* FOOTER*/
