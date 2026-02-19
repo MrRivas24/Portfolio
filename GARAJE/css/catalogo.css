@@ -413,7 +413,7 @@ body {
 .cerrar {
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: 15px;
     font-size: 25px;
     cursor: pointer;
 }
