@@ -546,9 +546,11 @@ body {
 
 /* FOOTER*/
 .footer {
+ flex-shrink: 0;
   background-color: #1a2332;
   color: white;
   padding: 40px 20px 20px;
+  
 }
 
 .footer-container {
@@ -651,18 +653,256 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* ========================================
+   RESPONSIVE DESIGN PROFESIONAL
+======================================== */
+
+/* Desktop grande (1440px y superior) */
+@media (min-width: 1440px) {
+  .footer {
+    padding: 50px 40px 30px;
+  }
+  
+  .footer-container {
+    max-width: 1400px;
+  }
+  
+  .footer-logo {
+    font-size: 22px;
+  }
+  
+  .footer-column p {
+    font-size: 15px;
+  }
+}
+
+/* Tablets horizontal (1024px - 1199px) */
+@media (max-width: 1199px) {
+  .footer-container {
+    max-width: 1000px;
+    padding-bottom: 25px;
+  }
+  
+  .footer-column {
+    padding: 0 15px;
+  }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+  .footer {
+    padding: 35px 20px 20px;
+  }
+  
+  .footer-container {
+    gap: 20px;
+    padding-bottom: 25px;
+  }
+  
+  .footer-column {
+    padding: 0 10px;
+  }
+  
+  .footer-logo {
+    font-size: 18px;
+  }
+  
+  .footer-column p,
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+  
+  .icon-link {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
+/* Tablets pequeñas (481px - 767px) */
+@media (max-width: 767px) {
+  .footer {
+    padding: 40px 20px 20px;
+  }
+  
   .footer-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 35px;
+    padding-bottom: 30px;
   }
-
+  
   .footer-column {
     text-align: center;
+    padding: 0;
   }
-
+  
+  .footer-logo {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  
+  .footer-column p {
+    font-size: 14px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .footer-column h4 {
+    font-size: 15px;
+    margin-bottom: 18px;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-column ul li a {
+    font-size: 14px;
+  }
+  
   .contact-icons {
     justify-content: center;
+    gap: 18px;
+    margin-top: 15px;
   }
-} 
+  
+  .icon-link {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+  
+  .footer-divider {
+    margin: 0 20px;
+  }
+  
+  .footer-bottom {
+    padding-top: 25px;
+  }
+  
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
+
+/* Móviles (320px - 480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 35px 15px 20px;
+  }
+  
+  .footer-container {
+    gap: 30px;
+    padding-bottom: 25px;
+  }
+  
+  .footer-column {
+    padding: 0;
+  }
+  
+  .footer-logo {
+    font-size: 18px;
+  }
+  
+  .footer-column p {
+    font-size: 13px;
+    max-width: 300px;
+  }
+  
+  .footer-column h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-column ul li a {
+    font-size: 13px;
+  }
+  
+  .contact-icons {
+    gap: 15px;
+  }
+  
+  .icon-link {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .footer-divider {
+    margin: 0 15px;
+  }
+  
+  .footer-bottom {
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+@media (max-width: 319px) {
+  .footer {
+    padding: 30px 10px 15px;
+  }
+  
+  .footer-container {
+    gap: 25px;
+  }
+  
+  .footer-logo {
+    font-size: 16px;
+  }
+  
+  .footer-column p {
+    font-size: 12px;
+  }
+  
+  .footer-column h4 {
+    font-size: 13px;
+  }
+  
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+  
+  .contact-icons {
+    gap: 12px;
+  }
+  
+  .icon-link {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+  
+  .footer-bottom p {
+    font-size: 9px;
+  }
+}
+
+/* Ajustes para orientación horizontal en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+  .footer {
+    padding: 25px 20px 15px;
+  }
+  
+  .footer-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .footer-column {
+    text-align: left;
+  }
+  
+  .contact-icons {
+    justify-content: flex-start;
+  }
+}
