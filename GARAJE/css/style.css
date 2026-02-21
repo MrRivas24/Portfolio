@@ -20,7 +20,34 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+.logo {
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
 
+.logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background: #fbf7f7;
+    transition: 0.3s;
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+.logo a{
+  text-decoration: none;
+  color: white;
+}
 /* Header */
 .header {
   background-color: #111827;

@@ -1,0 +1,403 @@
+/* ========================================
+   SECCIONES SERVICIO
+======================================== */
+
+.servicio {
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.servicio-reverso {
+    flex-direction: row-reverse;
+}
+
+.servicio-texto {
+    flex: 1;
+}
+
+.servicio-texto h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #111827;
+    font-weight: bold;
+}
+
+.servicio-texto p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #374151;
+    font-size: 16px;
+}
+
+.servicio-img {
+    flex: 1;
+}
+
+.servicio-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.servicio-img img:hover {
+    transform: scale(1.02);
+}
+
+/* ========================================
+   PORQUE (POR QUÉ ELEGIRNOS)
+======================================== */
+
+.porque {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #f9fafb;
+}
+
+.porque h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #111827;
+    letter-spacing: 1px;
+}
+
+.porque > p {
+    font-size: 18px;
+    color: #6b7280;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.porque-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.porque-grid div {
+    padding: 30px 25px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    background-color: white;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.porque-grid div:hover {
+    border-color: #111827;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.porque-grid div h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.porque-grid div p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #6b7280;
+}
+
+/* ========================================
+   CTA (CALL TO ACTION)
+======================================== */
+
+.cta {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #0b1220;
+}
+
+.cta h2 {
+    font-size: 36px;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.cta p {
+    font-size: 18px;
+    color: #d1d5db;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta button,
+.cta a {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: white;
+    color: #0b1220;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cta button:hover,
+.cta a:hover {
+    background-color: #f3f4f6;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Desktop grande (1440px y superior) */
+@media (min-width: 1440px) {
+    .servicio {
+        padding: 100px 10%;
+        gap: 80px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 32px;
+    }
+    
+    .porque {
+        padding: 100px 10%;
+    }
+    
+    .cta {
+        padding: 100px 10%;
+    }
+}
+
+/* Tablets horizontal (1024px - 1199px) */
+@media (max-width: 1199px) {
+    .servicio {
+        padding: 70px 8%;
+        gap: 50px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 26px;
+    }
+    
+    .porque-grid {
+        gap: 25px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    .servicio {
+        padding: 60px 6%;
+        gap: 40px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 24px;
+    }
+    
+    .servicio-texto p {
+        font-size: 15px;
+    }
+    
+    .servicio-img img {
+        max-width: 400px;
+    }
+    
+    .porque {
+        padding: 60px 6%;
+    }
+    
+    .porque h2 {
+        font-size: 30px;
+    }
+    
+    .porque-grid {
+        gap: 20px;
+    }
+    
+    .porque-grid div {
+        padding: 25px 20px;
+    }
+    
+    .cta {
+        padding: 60px 6%;
+    }
+    
+    .cta h2 {
+        font-size: 30px;
+    }
+}
+
+/* Tablets pequeñas (481px - 767px) */
+@media (max-width: 767px) {
+    .servicio {
+        flex-direction: column !important; /* Fuerza columna en móvil */
+        padding: 50px 5%;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .servicio-reverso {
+        flex-direction: column !important; /* Mismo orden en móvil */
+    }
+    
+    .servicio-texto h2 {
+        font-size: 24px;
+    }
+    
+    .servicio-texto p {
+        font-size: 15px;
+    }
+    
+    .servicio-img img {
+        max-width: 100%;
+    }
+    
+    .porque {
+        padding: 50px 5%;
+    }
+    
+    .porque h2 {
+        font-size: 28px;
+    }
+    
+    .porque > p {
+        font-size: 16px;
+    }
+    
+    .porque-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+        gap: 20px;
+    }
+    
+    .porque-grid div {
+        padding: 25px 20px;
+        text-align: center; /* Centra en móvil */
+    }
+    
+    .cta {
+        padding: 50px 5%;
+    }
+    
+    .cta h2 {
+        font-size: 28px;
+    }
+    
+    .cta p {
+        font-size: 16px;
+    }
+    
+    .cta button,
+    .cta a {
+        padding: 14px 35px;
+        font-size: 15px;
+    }
+}
+
+/* Móviles (320px - 480px) */
+@media (max-width: 480px) {
+    .servicio {
+        padding: 40px 4%;
+        gap: 25px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    
+    .servicio-texto p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .porque {
+        padding: 40px 4%;
+    }
+    
+    .porque h2 {
+        font-size: 24px;
+    }
+    
+    .porque > p {
+        font-size: 15px;
+    }
+    
+    .porque-grid {
+        gap: 15px;
+    }
+    
+    .porque-grid div {
+        padding: 20px 15px;
+    }
+    
+    .porque-grid div h3 {
+        font-size: 18px;
+    }
+    
+    .porque-grid div p {
+        font-size: 14px;
+    }
+    
+    .cta {
+        padding: 40px 4%;
+    }
+    
+    .cta h2 {
+        font-size: 24px;
+    }
+    
+    .cta p {
+        font-size: 15px;
+    }
+    
+    .cta button,
+    .cta a {
+        padding: 12px 30px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+@media (max-width: 319px) {
+    .servicio {
+        padding: 30px 3%;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 20px;
+    }
+    
+    .porque {
+        padding: 30px 3%;
+    }
+    
+    .porque h2 {
+        font-size: 22px;
+    }
+    
+    .cta {
+        padding: 30px 3%;
+    }
+    
+    .cta h2 {
+        font-size: 22px;
+    }
+}
