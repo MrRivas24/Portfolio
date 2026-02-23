@@ -933,3 +933,259 @@ body {
     justify-content: flex-start;
   }
 }
+
+/* ========================================
+   SERVICIOS HOME - BASE
+======================================== */
+
+.servicios-home {
+    padding: 70px 7%;
+    margin-top: 3%;
+    background-color: #111827;
+    color: white;
+}
+
+.servicio {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.servicio:last-child {
+    margin-bottom: 0; /* Elimina margen del último servicio */
+}
+
+.servicio.reverso {
+    flex-direction: row-reverse;
+}
+
+.servicio-img {
+    flex: 1;
+}
+
+.servicio-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.servicio-img img:hover {
+    transform: scale(1.02);
+}
+
+.servicio-texto {
+    flex: 1;
+}
+
+.servicio-texto h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.servicio-texto p {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #d1d5db;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+/* Desktop grande (1440px y superior) */
+@media (min-width: 1440px) {
+    .servicios-home {
+        padding: 90px 10%;
+    }
+    
+    .servicio {
+        gap: 80px;
+        margin-bottom: 120px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 32px;
+    }
+    
+    .servicio-texto p {
+        font-size: 17px;
+    }
+    
+    .servicio-img img {
+        max-width: 550px;
+    }
+}
+
+/* Desktop estándar (1200px - 1439px) */
+@media (max-width: 1439px) {
+    .servicios-home {
+        padding: 70px 8%;
+    }
+    
+    .servicio {
+        gap: 60px;
+    }
+}
+
+/* Tablets horizontal (1024px - 1199px) */
+@media (max-width: 1199px) {
+    .servicios-home {
+        padding: 60px 6%;
+        margin-top: 4%;
+    }
+    
+    .servicio {
+        gap: 50px;
+        margin-bottom: 80px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 26px;
+    }
+    
+    .servicio-texto p {
+        font-size: 15px;
+    }
+    
+    .servicio-img img {
+        max-width: 450px;
+    }
+}
+
+/* Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    .servicios-home {
+        padding: 50px 5%;
+    }
+    
+    .servicio {
+        gap: 40px;
+        margin-bottom: 70px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+    
+    .servicio-texto p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+    
+    .servicio-img img {
+        max-width: 400px;
+    }
+}
+
+/* Tablets pequeñas (481px - 767px) */
+@media (max-width: 767px) {
+    .servicios-home {
+        padding: 50px 5%;
+        margin-top: 5%;
+    }
+    
+    .servicio {
+        flex-direction: column !important; /* Fuerza columna en móvil */
+        gap: 30px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    
+    .servicio.reverso {
+        flex-direction: column !important; /* Mismo orden en móvil */
+    }
+    
+    .servicio-texto h2 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+    }
+    
+    .servicio-texto p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+    
+    .servicio-img img {
+        max-width: 100%;
+    }
+}
+
+/* Móviles (320px - 480px) */
+@media (max-width: 480px) {
+    .servicios-home {
+        padding: 40px 4%;
+        margin-top: 6%;
+    }
+    
+    .servicio {
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 22px;
+        letter-spacing: 0.5px;
+        margin-bottom: 14px;
+    }
+    
+    .servicio-texto p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    
+    .servicio-img img {
+        border-radius: 6px;
+    }
+}
+
+/* Móviles muy pequeños (menos de 320px) */
+@media (max-width: 319px) {
+    .servicios-home {
+        padding: 35px 3%;
+    }
+    
+    .servicio {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .servicio-texto h2 {
+        font-size: 20px;
+    }
+    
+    .servicio-texto p {
+        font-size: 13px;
+    }
+}
+
+/* Ajuste para orientación horizontal en móviles */
+@media (max-height: 500px) and (orientation: landscape) {
+    .servicios-home {
+        padding: 30px 5%;
+    }
+    
+    .servicio {
+        flex-direction: row !important;
+        margin-bottom: 40px;
+    }
+    
+    .servicio.reverso {
+        flex-direction: row-reverse !important;
+    }
+    
+    .servicio-img img {
+        max-width: 300px;
+    }
+}
